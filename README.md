@@ -1,65 +1,45 @@
-<h1>OptimizedHTML 5</h1>
-<p>Lightweight startup HTML5 template, based on Gulp.</p>
+<h1><strong>OptimizedHTML 4:</strong> <br>Startup HTML template based on Gulp & Bootstrap 4</h1>
 
 <p>
-	<img src="https://raw.githubusercontent.com/agragregra/oh5/master/app/img/_src/preview.jpg" alt="Start HTML Template">
+	<img src="https://raw.githubusercontent.com/agragregra/OptimizedHTML-4/master/app/img/_src/preview.jpg" alt="Start HTML Template">
 </p>
 
-<p>Author: <a href="https://webdesign-master.ru/blog/tools/2019-07-15-optimizedhtml-5.html" target="_blank">WebDesign Master</a></p>
+<p>Author: <a href="http://webdesign-master.ru" target="_blank">WebDesign Master</a></p>
 
-<p><strong>OptimizedHTML 5</strong> - lightweight startup HTML5 template with <strong>Gulp 4</strong>, <strong>Sass</strong>, <strong>Browsersync</strong>, <strong>Autoprefixer</strong>, <strong>Uglify-ES</strong>, <strong>Clean-CSS</strong>, <strong>Rsync</strong>, <strong>CSS Reboot</strong> (Bootstrap reboot). It uses best practices for <strong>responsive images</strong> optimizing and contains a <strong>.htaccess</strong> file for resources caching (images, fonts, HTML, CSS, JS and other content types).</p>
+<p>OptimizedHTML is all-inclusive start HTML5 template with Bootstrap 4 (grid & reboot), Gulp, Sass, Browsersync, Autoprefixer, Clean-CSS, Uglify, Rsync and Bower (libs path) support. The template contains a <strong>.htaccess</strong> file with caching rules for web server.</p>
 
-<h2>How to use OptimizedHTML 5</h2>
+<p><strong>OptimizedHTML 4</strong> Start Template uses the best practices of web development.</p>
 
-<pre>git clone https://github.com/agragregra/oh5</pre>
+<p>Cross-browser compatibility: IE9+.</p>
+
+<p>The template uses a Sass with <strong>Sass</strong> or <strong>Scss</strong> syntax (optional).</p>
+
+<h2>How to use OptimizedHTML</h2>
 
 <ol>
-	<li>Clone or <a href="https://github.com/agragregra/OptimizedHTML-5/archive/master.zip">Download</a> <strong>OptimizedHTML 5</strong> from GitHub</li>
-	<li>Install Node Modules: <strong>npm i</strong></li>
-	<li>Run: <strong>gulp</strong></li>
+	<li><a href="https://github.com/agragregra/OptimizedHTML-4/archive/master.zip">Download</a> <strong>OptimizedHTML 4</strong> from GitHub;</li>
+	<li>Install Node Modules: <strong>npm i</strong>;</li>
+	<li>Run the template: <strong>gulp</strong>.</li>
 </ol>
 
-<h2>Main Gulp tasks:</h2>
+<h2>Gulp tasks:</h2>
 
 <ul>
-	<li><strong title="gulp task"><em>gulp</em></strong>: run default gulp task ('img', 'styles', 'scripts', 'browser-sync', 'watch')</li>
-	<li><strong title="cleanimg task"><em>cleanimg</em></strong>: Clean @*x responsive IMG's</li>
-	<li><strong title="rsync task"><em>rsync</em></strong>: project deployment via <strong>RSYNC</strong></li>
+	<li><strong>gulp</strong>: run default gulp task (sass, js, watch, browserSync) for web development;</li>
+	<li><strong>rsync</strong>: project deployment on the server from <strong>dist</strong> folder via <strong>RSYNC</strong>;</li>
 </ul>
 
-<h2>Basic rules</h2>
+<h2>Rules for working with the starting HTML template</h2>
 
 <ol>
-	<li>All custom <strong title="scripts task"><em>scripts</em></strong> located in <strong>app/js/_custom.js</strong></li>
-	<li>All custom <strong title="styles task"><em>styles</em></strong> located in <strong>app/sass/main.sass</strong></li>
-	<li>All Sass <strong>vars</strong> placed in <strong>app/sass/_vars.sass</strong></li>
-	<li>All <strong>fonts</strong> plug in <strong>app/sass/_fonts.sass</strong></li>
-	<li>All CSS styles of <strong>libraries</strong> plug in <strong>app/sass/_libs.sass</strong></li>
-	<li>All responsive <strong>images</strong> placed in <strong>app/img/_src/</strong> folder. All source images should initially have a 2x resolution. Result image folders after resize & compression: <strong>img/@1x/</strong> and <strong>img/@2x/</strong> accordingly.</li>
+	<li>All HTML files should have similar initial content as in <strong>app/index.html</strong>;</li>
+	<li><strong>Template Basic Images Start</strong> comment in app/index.html - all your custom template basic images (og:image for social networking, favicons for a variety of devices);</li>
+	<li><strong>Custom Browsers Color Start</strong> comment in app/index.html: set the color of the browser head on a variety of devices;</li>
+	<li><strong>Custom HTML</strong> comment in app/index.html - all your custom HTML;</li>
+	<li>For installing new jQuery library, just run the command "<strong>bower i plugin-name</strong>" in the terminal. Libraries are automatically placed in the folder <strong>app/libs</strong>. Bower must be installed in the system (npm i -g bower). Then place all jQuery libraries paths in the <strong>'libs'</strong> task (gulpfile.js);</li>
+	<li>All custom JS located in <strong>app/js/common.js</strong>;</li>
+	<li>All Sass vars placed in <strong>app/sass/_vars.sass | app/scss/_vars.scss</strong>;</li>
+	<li>All Bootstrap media queries placed in <strong>app/sass/_media.sass | app/scss/_media.scss</strong>;</li>
+	<li>All libraries CSS styles placed in <strong>app/sass/_libs.sass | app/scss/_libs.scss</strong>;</li>
+	<li>Rename <strong>ht.access</strong> to <strong>.htaccess</strong> before place it in your web server. This file contain rules for files caching on web server.</li>
 </ol>
-
-<h2>Included features</h2>
-
-<ol>
-	<li><a href="https://getbootstrap.com/docs/4.0/content/reboot/">bootstrap-reboot.scss</a> - Bootstrap Reboot CSS collection</li>
-	<li>
-		<a href="https://getbootstrap.com/docs/4.0/layout/overview/#responsive-breakpoints">_breakpoints.scss</a> - Bootstrap Breakpoints mixin</li>
-	<li><a href="https://github.com/agragregra/OptimizedHTML-5/blob/master/app/js/_lazy.js">js/_lazy.js</a> - Lazy loading images using Intersection Observer</li>
-</ol>
-
-<h2>Lazy loading images</h2>
-
-<p>Lazy loading img & background images using intersection observer. Enabled by default.</p>
-
-<p>Reference: <a href="https://developers.google.com/web/fundamentals/performance/lazy-loading-guidance/images-and-video/#using_intersection_observer">Google Developers</a>.</p>
-
-<p>1. Example of the <strong>usual &lt;img&gt; tag</strong>:</p>
-<pre>&lt;img class="lazy" src="thumb.gif" data-src="img/@1x/real.jpg" data-srcset="img/@1x/real.jpg 1x, img/@2x/real.jpg 2x"&gt;</pre>
-
-<p>2. <strong>Background image class</strong> changer example: <code>&lt;div class="lazy-background"&gt;</code> with added class ".visible" for styling.</p>
-
-<p>3. <strong>Background image style</strong> attribute lazy loading example: <code>&lt;div data-bg="image.jpg"&gt;</code>.</p>
-
-<h2>Caching</h2>
-
-<p>Rename <strong>ht.access</strong> to <strong>.htaccess</strong> before place it in your web server. This file contain rules for htaccess resources caching.</p>
