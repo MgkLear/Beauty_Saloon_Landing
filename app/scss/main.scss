@@ -55,11 +55,14 @@ body {
     color: #fff;
     text-decoration: none;
     background-color: $accent;
-    padding: 10px 60px;
-    font-size: 20px;
-    font-weight: bold;
+    padding: 16px 60px;
+    font-size: 15px;
+	font-weight: bold;
+	letter-spacing: 3px;
     border-radius: 2px;
-    text-align: center;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 600;
     position: relative;
     outline: none;
     transition: background-color .1s ease;
@@ -154,7 +157,124 @@ section {
 	text-align: center;
 }
 
+.header-flex {
+	display: flex;
+	position: relative;
+	height: 100%;
+	top: 0;
+}
+.flex-center {
+	margin: auto;
+}
+.header-composition {
+	text-align: center;
+	position: relative;
+	p {
+		margin-top: 40px;
+	}
+	.button {
+		margin-top: 25px;
+	}
+}
+.welcome {
+	p {
+		font-size: 14px;
+		text-transform: uppercase;
+		display: flex;
+		align-items: center;
+		white-space: nowrap;
+		margin: 0px;
+		margin-bottom: -10px;
+		&::before, &::after {
+			content: '';
+			height: 1px;
+			width: 100%;
+			position: relative;
+			background-color: #fff;
+			display: inline-block;
+		}
+		span {
+			margin: 0 10px;
+		}
+	}
+	.h1 {
+		font-weight: 100;
+		font-size: 70px;
+		margin: 0;
+		line-height: 1.6;
+		border-bottom: 1px solid #fff;
+		white-space: nowrap;
+	}
+	strong {
+		display: block;
+		font-size: 17px;
+		text-transform: uppercase;
+		margin-top: 15px;
+		.fa {
+			margin-right: 10px;
+			color: #555555;
+			font-size: 12px;
+			&:last-child {
+				margin-left: 10px;
+				margin-right: inherit;
+			}
+		}
+	}
+}
 
+.header-social {
+	position: absolute;
+	display: flex;
+	right: 0;
+	height: 100%;
+	border-left: 1px solid rgba(#fff, .1);
+	top: 0;
+	padding: 0 12.5px;
+}
+.soc {
+	margin: auto;
+	ul, li {
+		margin: 0;
+		padding: 0;
+		top: 0;
+		list-style-type: none;
+	}
+	a {
+		color: #2c2c2c;
+		font-size: 17px;
+		display: block;
+		background-color: rgba(#fff, .2);
+		height: 38px;
+		width: 38px;
+		border-radius: 10em;
+		text-align: center;
+		margin: 18px 0;
+		line-height: 38px;
+		transition: background-color .25 ease;
+		&:hover {
+		background-color: rgba(#fff, .4);
+		}
+	}
+}
+
+.header-contacts {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border-top: 1px solid rgba(#fff, .1);
+	padding: 12.5px 0;
+	width: 100%;
+	background-color: rgba(#151515, .2);
+	.fa {
+		margin-right: 5px;
+		color: #555555;
+	}
+	.phone-h {
+		font-family: 'firasans', sans-serif;
+		text-align: center;
+		margin-left: -7vh;
+	}
+}
 // ------------- Extension My-menu -------------
 html.mm-opened {
 	overflow-y: scroll;
