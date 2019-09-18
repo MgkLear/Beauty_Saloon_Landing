@@ -32,7 +32,6 @@ body {
 	}
 	&.ishome {
 		.site-header {
-			min-height: 700px;
 			height: 100vh;
 			background-color: $dark;
 			color: #ffffff;
@@ -295,8 +294,15 @@ html.mm-opened {
 .mm-panels>.mm-panel.mm-hasnavbar {
 	right: -18px;
 }
+.mm-listview {
+	border-top: 1px solid rgba(255,255,255,.2);
+}
 .mm-listview>li:not(.mm-divider):after {
 	display: none;
+}
+.mm-listview>li:not(.mm-divider) {
+	padding-bottom: 15px;
+	border-bottom: 1px solid rgba(255,255,255,.2);
 }
 .mm-panels>.mm-panel:after, .mm-panels>.mm-panel:before {
 	height: 0;
@@ -313,7 +319,7 @@ html.mm-opened {
 	>li {
 		>a {
 			transition: color .3s ease;
-			padding: 30px 14% 0;
+			padding: 15px 14% 0;
 			font-size: 18px;
 			&:hover {
 				color: $accent;

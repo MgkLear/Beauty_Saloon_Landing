@@ -5,23 +5,95 @@
 
 // ≥1200px
 @include media-breakpoint-down(lg) {
-	
+	.welcome {
+        .h1 {
+            font-size: 64px;
+        }
+    }
+    .header-contacts {
+        font-size: 14px;
+    }
 }
 
 // ≥992px
 @include media-breakpoint-down(md) {
-
+    .welcome {
+        .h1 {
+            font-size: 47px;
+        }
+    }
 }
 
 // ≥768px
 @include media-breakpoint-down(sm) {
-
+    .header-contacts {
+        .phone-h {
+            text-align: left;
+            margin-left: 0.5vh;
+        }
+    }
 }
 
 // ≥576px
 @include media-breakpoint-down(xs) {
+    body {
+        font-size: 14px;
+    }
+    body.ishome .site-header .top-line {
+        padding-top: 20px;
+        .logo img {
+            margin-left: 20px;
+        }
+    }
+    .hamburger {
+        top: 10px;
+    }
+    .flex-center {
+        margin: 15vh auto;
+    }
+    .phone {
+        display: none;
+    }
+    .header-composition {
+        p {
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+    }
+    .welcome {
+        p {
+            margin-bottom: -5px;
+            font-size: 10px;
+            span {
+                margin: 0 5px 0;
+            }
+        }
+        .h1 {
+            font-size: 32px;
+        }
+        strong {
+            margin-top: 7px;
+            font-size: 14px;
+        }
+    }
+
+// ------------- Extension My-menu -------------
+
+    .mm-panels > .mm-panel.mm-hasnavbar {
+        padding-top: 10px;
+    }
+    .mm-listview > li > a{
+        padding-top: 14px;
+    }
+    .mm-navbar .mm-title img {
+        margin: 10px 0 20px;
+    }
+// ------------- Extension My-menu -------------
 
 }
+
+
+
 
 
 /*==========  Mobile First  ==========*/
