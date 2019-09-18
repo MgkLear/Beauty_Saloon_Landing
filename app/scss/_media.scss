@@ -22,6 +22,9 @@
             font-size: 47px;
         }
     }
+    .carousel-services-item {
+        flex-direction: column;
+    }
 }
 
 // ≥768px
@@ -77,13 +80,28 @@
         }
     }
 
+    .carousel-services-item-composition .h3 {
+        font-size: 24px;
+    }
+    .carousel-services .owl-nav>div {
+        &:hover {
+            opacity: .4;
+        }
+        &:active {
+            opacity: 1;
+        }
+    }
+    .carousel-services-item-img {
+        display: none;
+    }
+
 // ------------- Extension My-menu -------------
 
     .mm-panels > .mm-panel.mm-hasnavbar {
         padding-top: 10px;
     }
     .mm-listview > li > a{
-        padding-top: 14px;
+        padding: 14px 14%;
     }
     .mm-navbar .mm-title img {
         margin: 10px 0 20px;
@@ -115,5 +133,5 @@
 
 // ≤1200px
 @include media-breakpoint-up(xl) {
-	
+
 }
