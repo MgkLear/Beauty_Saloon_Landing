@@ -23,14 +23,7 @@ body {
 	overflow-x: hidden;
 	color: $text;
 	input, textarea {
-		border: #666 1px solid;
 		outline: none;
-		&:focus:required:invalid {
-			border-color: red;
-		}
-		&:required:valid {
-			border-color: green;
-		}
 	}
 	&.ishome {
 		.site-header {
@@ -453,19 +446,12 @@ section {
 	}	
 }
 .fotorama {
+	border-radius: 4px;
 	background-color: rgba($dark, .4);
 	&__nav {
 		&-wrap {
 			position: absolute;
-			bottom: 15px;
-			padding: 0 30px;
-			width: 100%;
-		}
-	}
-	&__thumb {
-		transition: border-color .4s ease;
-		&-border {
-			border-color: $over;
+			bottom: 6px;
 		}
 	}
 	&__arr-{
@@ -491,8 +477,114 @@ section {
 }
 // -------------------- Gallery --------------------
 
+// -------------------- Callback --------------------
+.s-call {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: 25%;
+	&::before {
+		content: '';
+		width: 50%;
+		right: 0;
+		height: 100%;
+		position: absolute;
+		background-color: rgba($accent, .9);
+	}
+	&.inverse {
+		background-color: #fff;
+	}
+}
+textarea, select, input {
+	border-radius: 2px;
+	background-color: transparent;
+	border: 1px solid rgba(#000, .1);
+	border-bottom: 2px solid rgba(#000, .1);
+	padding: 8px 20px;
+	font-size: 16px;
+	display: inline-block;
+	color: #333333;
+}
+select {
+	padding: 10px 22px;
+	appearance: none;
+}
+.success {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: none;
+	z-index: 10;
+	span {
+		margin: auto;
+	}
+	& ~ * {
+		transition: all .5s ease;
+	}
+	&.active {
+		& ~ * {
+			opacity: .5;
+			filter: blur(10px);
+		}
+	}
+}
+.select {
+	position: relative;
+	&:after {
+		content: "";
+		display: block;
+		border-style: solid;
+		border-width: 6px 5px 0 5px;
+		border-color: #fff transparent transparent transparent;
+		pointer-events: none;
+		position: absolute;
+		top: 50%;
+		right: 1rem;
+		z-index: 1;
+		margin-top: -3px;
+	}
+}
+.callback {
+	padding: 25% 0;
+	position: relative;
+	&-logo {
+		img {
+			width: 100px;
+			height: auto;
+		}
+	}
+	.form-head {
+		margin-top: 0;
+		font-size: 30px;
+		color: #ffffff;
+	}
+	p {
+		margin-top: 0;
+	}
+	input, textarea, select {
+		color: #fff;
+		width: 100%;
+		&::placeholder {
+			color: #ffffff;
+		}
+		option {
+			color: #555555;
+		}
+	}
+	input, textarea {
+		margin-bottom: 17px;
+	}
+	.button {
+		margin-top: 40px;
+	}
+}
+// -------------------- Callback --------------------
 
-// -------------- Extension My-menu --------------
+
+// --------------- Extension My-menu ---------------
 html.mm-opened {
 	overflow-y: scroll;
 }
@@ -560,7 +652,7 @@ html.mm-opened {
 		}
 	}
 }
-// ------------- Extension My-menu -------------
+// -------------- Extension My-menu --------------
 
 
 @import "media"; // Always at the end
