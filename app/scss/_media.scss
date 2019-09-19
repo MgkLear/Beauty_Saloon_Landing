@@ -13,6 +13,9 @@
     .header-contacts {
         font-size: 14px;
     }
+    .callback {
+        padding: 15% 0;
+    }
 }
 
 // ≥992px
@@ -25,6 +28,15 @@
     .carousel-services-item {
         flex-direction: column;
     }
+    .s-call {
+        background-size: cover;
+        &::before {
+            width: 100%;
+        }
+    }
+    .callback {
+        padding: 10% 0;
+    }
 }
 
 // ≥768px
@@ -34,6 +46,9 @@
             text-align: left;
             margin-left: 0.5vh;
         }
+    }
+    .callback {
+        padding: 5% 0;
     }
 }
 

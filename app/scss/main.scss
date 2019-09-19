@@ -107,6 +107,9 @@ body {
 		}
 	}
 }
+.firasans {
+	font-family: 'firasans', sans-serif;
+}
 // -------------------- Common --------------------
 
 
@@ -507,6 +510,9 @@ textarea, select, input {
 select {
 	padding: 10px 22px;
 	appearance: none;
+	option {
+		background-color: rgba($accent, .92);
+	}
 }
 .success {
 	position: absolute;
@@ -527,7 +533,7 @@ select {
 	&.active {
 		& ~ * {
 			opacity: .5;
-			filter: blur(10px);
+			filter: blur(20px);
 		}
 	}
 }
