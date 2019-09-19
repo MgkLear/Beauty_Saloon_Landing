@@ -50,6 +50,12 @@
     .callback {
         padding: 5% 0;
     }
+    .s-partners .partners .owl-nav > div.owl-prev {
+        left: -40px;
+    }
+    .s-partners .partners .owl-nav > div.owl-next {
+        right: -40px;
+    }
 }
 
 // ≥576px
@@ -126,6 +132,20 @@
     .review-content .quotes {
         display: none;
     }
+
+    .footer-social .soc li a {
+        margin: 0;
+    }
+    .footer-column {
+        margin: 0 0 10px;
+    }
+    .footer-menu {
+        padding-left: 10px;
+    }
+    .preloader .pulse {
+        top: 40vh;
+    }
+
 // ------------- Extension My-menu -------------
 
     .mm-panels > .mm-panel.mm-hasnavbar {
