@@ -95,6 +95,15 @@
         display: none;
     }
 
+    .fotorama {
+        &__arr-{
+            &-prev, &-next {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
 // ------------- Extension My-menu -------------
 
     .mm-panels > .mm-panel.mm-hasnavbar {
