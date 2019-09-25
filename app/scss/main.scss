@@ -57,12 +57,12 @@ body {
     background-color: $accent;
     padding: 16px 60px;
     font-size: 15px;
-	font-weight: bold;
-	letter-spacing: 3px;
+		font-weight: bold;
+		letter-spacing: 3px;
     border-radius: 2px;
-	text-align: center;
-	text-transform: uppercase;
-	font-weight: 600;
+		text-align: center;
+		text-transform: uppercase;
+		font-weight: 600;
     position: relative;
     outline: none;
     transition: background-color .1s ease;
@@ -82,6 +82,7 @@ body {
     }
     &:focus, &:hover {
         text-decoration: none;
+				outline: none;
         color: #fff;
     }
     &:hover {
@@ -91,7 +92,8 @@ body {
         }
     }
     &:active {
-        background-color: darken($accent, 5%);
+				background-color: darken($accent, 5%);
+				outline: none;
         &::after {
             opacity: .32;
         }
@@ -523,7 +525,7 @@ section {
 }
 .s-royal {
 	p {
-		margin: 30px 0;
+		margin: 20px 0;
 	}
 }
 .s-overley {
@@ -728,29 +730,6 @@ select {
 			}
 			
 		}
-	}
-}
-.quotes {
-	position: absolute;
-	width: 100%;
-	&::after, &::before {
-		content: ',,';
-		position: absolute;
-		line-height: 0;
-		font-size: 56px;
-		font-weight: bold;
-		font-family: "Times New Roman", serif;
-		color: $accent;
-		display: block;
-	}
-	&::after {
-		right: -4vh;
-		top: 160px;
-	}
-	&::before {
-		top: 200px;
-		left: -4vh;
-		transform: rotate(180deg);
 	}
 }
 .review {

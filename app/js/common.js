@@ -1,7 +1,7 @@
-$(function() {
+$(function () {
 
 	$('#my-menu').mmenu({
-		extensions: [ 'widescreen', 'theme-black', 'effect-menu-slide', 'pagedim-black' ],
+		extensions: ['widescreen', 'theme-black', 'effect-menu-slide', 'pagedim-black'],
 		navbar: {
 			title: '<img src="./img/logo-1.svg" alt="Салон красоты S&Mitler">'
 		},
@@ -11,14 +11,14 @@ $(function() {
 	});
 
 	var api = $('#my-menu').data('mmenu');
-	api.bind('opened', function() {
+	api.bind('opened', function () {
 		$('.hamburger').addClass('is-active');
-	}).bind('closed', function() {
+	}).bind('closed', function () {
 		$('.hamburger').removeClass('is-active');
 	});
 
-	$('.carousel-services').on('initialized.owl.carousel', function() {
-		setTimeout(function() {
+	$('.carousel-services').on('initialized.owl.carousel', function () {
+		setTimeout(function () {
 			carouselService()
 		}, 100);
 	});
@@ -44,19 +44,19 @@ $(function() {
 
 
 	function carouselService() {
-		$('.carousel-services-item').each(function() {
+		$('.carousel-services-item').each(function () {
 			var ths = $(this),
 				thsh = ths.find('.carousel-services-item-content').outerHeight();
-				ths.find('.carousel-services-item-img').css('min-height', thsh);
+			ths.find('.carousel-services-item-img').css('min-height', thsh);
 		});
-	}carouselService();
+	} carouselService();
 
-	$('.carousel-services-item-composition .h3').each(function() {
+	$('.carousel-services-item-composition .h3').each(function () {
 		var ths = $(this);
 		ths.html(ths.html().replace(/(\S+)\s*$/, '<span>$1</span>'));
 	});
 
-	$('section .h2').each(function() {
+	$('section .h2').each(function () {
 		var ths = $(this);
 		ths.html(ths.html().replace(/(\S+)/, '<span>$1</span>'));
 	});
@@ -93,23 +93,27 @@ $(function() {
 		navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>']
 	});
 
-	$(window).scroll(function() {
+	$(window).scroll(function () {
 		if ($(this).scrollTop() > $(this).height()) {
 			$('.top').addClass('active');
 		} else {
 			$('.top').removeClass('active');
 		}
 	});
-	$('.top').click(function() {
-		$('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
-		
+	$('.top').click(function () {
+		$('html, body').stop().animate({ scrollTop: 0 }, 1000, 'swing');
+
+	});
+	$('.about-us').click(function () {
+		$('html, body').stop().animate({ scrollTop: $('.s-royal').offset().top }, 1000, 'swing');
+
 	});
 
 	//E-mail Ajax Send
-	$("form.callback").submit(function() { //Change
+	$("form.callback").submit(function () { //Change
 		var th = $(this);
 		$(th).find('.success').addClass('active').css('display', 'flex').hide().fadeIn();
-		setTimeout(function() {
+		setTimeout(function () {
 			$(th).find('.success').removeClass('active').fadeOut();
 			// Done Functions
 			th.trigger("reset");
@@ -121,9 +125,9 @@ $(function() {
 	function onResize() {
 		$('.carousel-services-item-content').equalHeights();
 	};
-	window.onresize = function() {onResize()};
+	window.onresize = function () { onResize() };
 
-	$(window).on('load', function() {
+	$(window).on('load', function () {
 		$('.preloader').delay(1000).fadeOut('slow');
 	});
 
