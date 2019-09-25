@@ -109,8 +109,8 @@ body {
 		}
 	}
 }
-.firasans {
-	font-family: 'firasans', sans-serif;
+.Arial {
+	font-family: 'Arial', sans-serif;
 }
 // -------------------- Common --------------------
 
@@ -216,7 +216,7 @@ body {
 	position: absolute;
 	right: 85px;
 	top: 44px;
-	font-family: 'firasans', sans-serif;
+	font-family: 'Arial', sans-serif;
 	font-size: 22px;
 	white-space: nowrap;
 	.fa {
@@ -379,7 +379,7 @@ section {
 		color: #555555;
 	}
 	.phone-h {
-		font-family: 'firasans', sans-serif;
+		font-family: 'Arial', sans-serif;
 		text-align: center;
 		margin-left: -7vh;
 	}
@@ -445,7 +445,7 @@ $colors: ($blue, $red, $accent);
 				border: none;
 			}
 			strong {
-				font-family: 'firasans', sans-serif;
+				font-family: 'Arial', sans-serif;
 				color: #4a4a4a;
 			}
 			.fa {
@@ -923,7 +923,7 @@ select {
 			left: 3px;
 			font-size: 24px;
 		}
-		font-family: 'firasans', sans-serif;
+		font-family: 'Arial', sans-serif;
 		font-size: 26px;
 		line-height: 1;
 	}
