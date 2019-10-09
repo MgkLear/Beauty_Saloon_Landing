@@ -125,9 +125,9 @@ $(function () {
 	function onResize() {
 		$('.carousel-services-item-content').equalHeights();
 	};
-	window.onresize = function () { onResize() };
+	window.onresize = () => { onResize() };
 
-	$(window).on('load', function () {
+	$(window).load(() => {
 		$('.preloader').delay(1000).fadeOut('slow');
 	});
 
